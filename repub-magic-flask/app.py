@@ -52,21 +52,6 @@ def story_api_republish(npr_id):
      story_html = story_html)
 
 
-# @app.route('/legislators/<id>')
-# def legislator_profile(id):
-#     r = requests.get('https://api.accessmo.org/legislators/{0}'.format(id))
-#     leg = json.loads(r.content)
-
-#     photo_r = requests.get(leg['photo_url'], stream=True)
-#     photo_filename = '/tmp/{0}'.format(leg['photo_url'].split('/')[-1])
-#     if photo_r.status_code == 200:
-#         with open(photo_filename, 'wb') as f:
-#             for chunk in photo_r.iter_content(1024):
-#                 f.write(chunk)
-#             width, height = get_image_size.get_image_size(photo_filename)
-
-
-#     return render_template('legislator.html', legislator=leg, width=width, height=height)
 
 
 if __name__ == '__main__':
