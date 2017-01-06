@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Republish {{story_title}} - Side Effects</title>
+		<!-- Pure CSS - Super Lightweight base styles -->
+		<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.publicradiocode.org/sfx/repub-magic/v1/rainbow-baby-blue.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/html.min.js"></script>
+	</head>
+	<body>
+		<div id="layout">
+			<div id="main">
+				<div class="content">
+					<div class="header">
+						<img src="http://mediad.publicbroadcasting.net/p/wfyi/files/201510/SideEffectsLogo.gif">
+						<h1>Republish this Story</h1>
+					</div>
+
+
+					<div id="story-preview">
+						<div class="image-contain">
+							<img class="story-image" src="{{story_image}}"></img>
+						</div>
+						<div class="story-desc">
+							<div class="center">
+								<h2>{{ story_title }}</h2>
+								<p>{{ story_author }}</p>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<p><a href="{{story_canonical_url}}">Return to Story</a></p>
+					
+
+
+					<h2 id="for-public-radio-tv" class="content-subhead">
+						For Public Radio and TV Stations
+						<a href="#for-public-radio-tv" class="content-link" title="Heading anchor"></a>
+					</h2>
+
+					<p>All Side Effects original reporting can be pulled in with the NPR Story API, a feature available on Core Publisher and many other public media web systems. If you're unsure how to do this, contact your station webmaster for more information.</p>
+
+					<table class="pure-table pure-table-horizontal">
+						<thead>
+							<td>
+								ID Information for NPR API Use
+							</td>
+							<td></td>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Side Effects Public Media's Station/Organization ID</td>
+								<td>394</td>
+							</tr>
+							<tr>
+								<td>This Story's ID (Use "Get NPR Content" Menu)</td>
+								<td>{{story_id}}</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h2 id="for-other-publications" class="content-subhead">
+						For Other Publications
+						<a href="#for-other-publications" class="content-link" title="Heading anchor"></a>
+					</h2>
+
+					<p>Side Effects Public Media welcomes the republication of any of our original reporting. However, we do ask that you do the following:</p>
+					<ol><li>If you’re republishing online, include our tracking tag, which tells us who is sharing our stories. To do this, following the instructions included on ths page.</li>
+					<li>We do not permit use of Side Effects content without our permission, or use of our content online without the tracking tag. If you wish to republish in print, or cannot use our tracking tag for some reason, e-mail our editor at healthnews@wfyi.org</li>
+					<li>Credit and link back to us as follows: This story was produced by <a href="http://sideeffectspublicmedia.org">Side Effects Public Media</a>, a news collaborative covering public health.</li>
+					<li>Don’t edit our material, except to reflect relative changes in time or location (For example, "yesterday" can be changed to "last week," and "Columbia, Missouri" to "Columbia" or "here.") or for editorial style.</li>
+					<li>Include all links from our story.</li>
+					<li>If you republish our photographs, use the same credits that we use.</li>
+					<li>Use our reporters’ bylines. We prefer “Author Name, Side Effects.”</li></ol>
+
+					<p>To republish this story, copy and paste the HTML below into the "source" view of your CMS (ex: Wordpress, Drupal, etc):</p>
+
+					<pre class="code code-wrap" data-language="html">
+						<code>{{story_html}}</code>
+					</pre>
+
+				</div>
+
+
+				
+			</div>
+		</div>
+		
+	</body>
+</html>
