@@ -40,7 +40,15 @@ def story_api_republish(npr_id):
     for graph in story['textWithHtml']['paragraph']:
         story_html += graph['$text']
 
-    print story['title']['$text']   
+    story_tracking_code = ""
+
+    if "iframe" in story_html:
+        split_string = story_html.split("iframe")
+        story_tracking_code += "<iframe"
+        story_tracking_code += split_string[-2]
+        story_tracking_code += "iframe>"
+
+    
 
     return render_template('story_api_republish.html',
      story_title=story_title,
@@ -49,7 +57,8 @@ def story_api_republish(npr_id):
      story_canonical_url = story_canonical_url,
      story_orgid = story_orgid,
      story_id = story_id,
-     story_html = story_html)
+     story_html = story_html,
+     story_tracking_code = story_tracking_code)
 
 
 
