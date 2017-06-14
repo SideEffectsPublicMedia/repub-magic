@@ -11,7 +11,7 @@ npr_key = os.environ.get('NPR_KEY')
 
 @app.route('/')
 def hello_world():
-    return '<h1>Repub Magic</h1><h2>Version 1.0.0, Build 2017.01.06</h2>'
+    return '<h1>Repub Magic</h1><h2>Version 1.0.1, Build 2017.06.14</h2>'
 
 @app.route('/republish/story-api/<npr_id>')
 def story_api_republish(npr_id):
